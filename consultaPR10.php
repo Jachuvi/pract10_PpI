@@ -9,20 +9,20 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Práctica 10</a>
+    <a class="navbar-brand" href="inicioPrac10.html">Práctica 10</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="inicioPrac10.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="registro.php">Registro</a>
+          <a class="nav-link" href="registroPR10.php">Registro</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="consulta.php">Consulta</a>
+          <a class="nav-link active" aria-current="page" href="consultaPR10.php">Consulta</a>
         </li>
       </ul>
     </div>
@@ -31,12 +31,12 @@
 
 <div class="container py-4">
 <?php
-// Conexión a MySQL (ajusta si difiere en tu entorno)
+
 $servername = 'db';
 $username   = 'root';
 $password   = 'root_password';
 $dbname     = 'prac10';
-$table      = 'libros'; // Cambia si tu tabla tiene otro nombre
+$table      = 'Libros'; 
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (mysqli_connect_errno()) {
@@ -70,7 +70,7 @@ if (mysqli_connect_errno()) {
             $imgCell = 'Sin imagen';
             if (!is_null($row['portada'])) {
                 $blob = $row['portada'];
-                // Detectar MIME de la imagen desde el binario
+                
                 $mime = 'image/jpeg';
                 if (function_exists('getimagesizefromstring')) {
                     $info = @getimagesizefromstring($blob);
@@ -102,4 +102,3 @@ if (mysqli_connect_errno()) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
-

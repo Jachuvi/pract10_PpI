@@ -10,20 +10,20 @@
 <body>
    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/pract10/index.html">Práctica 10</a>
+            <a class="navbar-brand" href="inicioPrac10.html">Práctica 10</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/pract10/index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="inicioPrac10.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="registroPR10.php">Registro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/consulta.php">Consulta</a>
+                        <a class="nav-link" href="consultaPR10.php">Consulta</a>
                     </li>
                 </ul>
             </div>
@@ -31,8 +31,8 @@
     </nav>
     <form action="registroDB.php" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
-            <label for="pk" class="form-label">PK</label>
-            <input class="form-control" type="number" placeholder="Default input" aria-label="default input example" name="pk" id="pk">
+            <label for="id" class="form-label">PK</label>
+            <input class="form-control" type="number" placeholder="Default input" aria-label="default input example" name="id" id="id">
         </div>
         
         <label for="titulo" class="form-label">Título</label>
